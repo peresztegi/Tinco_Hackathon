@@ -1,18 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="fb-root"></div>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="516083218869346"
+         logged_in_greeting="Hi! How can we help you?"
+         logged_out_greeting="Hi! How can we help you?">
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
-  }
+  },
+  mounted() {
+    window.extAsyncInit = function () {
+      console.log('haha')
+    }
+  },
 }
 </script>
