@@ -2,21 +2,21 @@
 
 ## Project Introduction
 
-Tinco is an virtual assistant or chatbot for solving DMV waiting problems. 
+OneGov creates the Amazon Prime experience for government services. As a first step and MVP, we created a virtual assistant to get rid of the long DMV wait times. 
 
 #### Problem
 
-People spend hours or even days in many DMV sites to have their vehicle registration renewed, ID/DL renewed.
-The existing online digital applications or Kiosks are unintuitive, confusing and limited. 
+People spend hours or even days in many DMV sites to have their vehicle registration & ID/DL renewed.
+The existing online digital applications or kiosks are unintuitive, confusing, and limited. 
 
 #### Solution
 
 We designed a virtual assistant that disrupts the market. It leverages advanced AI technologies to save 
-people's time. Seriouly, you could renew your license in 30 seconds! 
+people's time. Seriously, you can renew your vehicle registration in 30 seconds! 
 
 ## Project Overview
 
-This is a demo to show the concept. 
+This is a demo to show the concept.
 
 ### Technologies and Programming Languages
 
