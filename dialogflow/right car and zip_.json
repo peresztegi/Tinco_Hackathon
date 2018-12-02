@@ -1,0 +1,107 @@
+{
+  "id": "5e479c71-e8a8-4535-9a83-075145cd205c",
+  "parentId": "77d5b3bb-f54d-4e3e-9eda-e079aae62a32",
+  "rootParentId": "77d5b3bb-f54d-4e3e-9eda-e079aae62a32",
+  "name": "right car and zip?",
+  "auto": true,
+  "contexts": [
+    "vehicleregistrationrenewal-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "vehicleregistrationrenewal-custom-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "7d5b592b-b96e-4e80-8686-2e1732069a8a",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "plateNumber",
+          "value": "$plateNumber",
+          "prompts": [
+            "May I ask your license plate number?"
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 3,
+          "platform": "facebook",
+          "imageUrl": "https://www.cstatic-images.com/car-pictures/main/USC50FOC051B021001.png",
+          "lang": "en"
+        },
+        {
+          "type": 2,
+          "platform": "facebook",
+          "title": "Are you still driving this vehicle and residing at the same address, in the 90026 Zip code?",
+          "replies": [
+            "Yes, that's correct",
+            "No"
+          ],
+          "lang": "en"
+        },
+        {
+          "type": 0,
+          "speech": "Nice ride :)"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "facebook": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "lastUpdate": 1543703078,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "5efe09a9-0eab-4996-9f75-73aa35b6cc3e",
+      "data": [
+        {
+          "text": "My license plate number is "
+        },
+        {
+          "text": "7FAP737",
+          "alias": "plateNumber",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543651639,
+      "isAuto": false
+    },
+    {
+      "id": "5b2a7a35-9249-4f25-bfc0-b0c70cd30019",
+      "data": [
+        {
+          "text": "7FAP737",
+          "alias": "plateNumber",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543651639,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}

@@ -1,0 +1,135 @@
+{
+  "id": "77d5b3bb-f54d-4e3e-9eda-e079aae62a32",
+  "name": "vehicle registration renewal",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "response",
+      "affectedContexts": [
+        {
+          "name": "vehicleregistrationrenewal-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Let’s do that and avoid those nasty lines at the DMV! (Looks like your local DMV lines are 44mins right now - Ouch!)"
+        },
+        {
+          "type": 0,
+          "speech": [
+            "May I ask your license plate number?",
+            "What’s your license plate number?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1543702509,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "ee554976-44b9-43ea-b915-d424b33dc60b",
+      "data": [
+        {
+          "text": "I want to renew the vehicle registration"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543700984,
+      "isAuto": false
+    },
+    {
+      "id": "2c8815f6-a246-47bf-97bf-30116f8c7eae",
+      "data": [
+        {
+          "text": "dmv registration renewal"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543700984,
+      "isAuto": false
+    },
+    {
+      "id": "108b9744-1aa7-4663-a421-00404818a35d",
+      "data": [
+        {
+          "text": "renew dmv registration"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543700984,
+      "isAuto": false
+    },
+    {
+      "id": "a03b0da2-d72a-4699-97dd-ef5c8267d2cd",
+      "data": [
+        {
+          "text": "renew my dmv registration"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543700984,
+      "isAuto": false
+    },
+    {
+      "id": "c078edbf-c940-4a4b-85ea-4cfbcf9bd8bc",
+      "data": [
+        {
+          "text": "I need to renew my dmv registration"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543700984,
+      "isAuto": false
+    },
+    {
+      "id": "1b617b58-92c9-4658-bfa2-e9ed06b095d1",
+      "data": [
+        {
+          "text": "vehicle registration renewal"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543646322,
+      "isAuto": false
+    },
+    {
+      "id": "7425530e-d831-47eb-993d-ac3905677e40",
+      "data": [
+        {
+          "text": "registration renewal"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1543646322,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}
