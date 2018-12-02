@@ -11,6 +11,8 @@
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
+  // use facebook messenger as our bot ui.
+  // embedded in our page.
   window.fbAsyncInit = function() {
     FB.init({
       appId            : '302115397083104',
@@ -36,5 +38,43 @@
 </div>
 <div id="app"></div>
 <!-- built files will be auto injected -->
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script>
+  Stripe.setPublishableKey('pk_test_LGsMPv0FGVqIMz6vRPsVwOP7');
+  function beginApplePay(amount) {
+    var paymentRequest = {
+      countryCode: 'US',
+      currencyCode: 'USD',
+      total: {
+        label: 'Stripe.com',
+        amount: amount,
+      }
+    }; // see above
+
+    var session = Stripe.applePay.buildSession(paymentRequest,
+      function(result, completion) {
+
+        $.post('/charges', { token: result.token.id }).done(function() {
+          completion(ApplePaySession.STATUS_SUCCESS);
+          // TODO: tell the backend to update the bot
+        }).fail(function() {
+          completion(ApplePaySession.STATUS_FAILURE);
+        });
+
+      }, function(error) {
+        console.log(error.message);
+      });
+
+    session.oncancel = function() {
+      console.log("User hit the cancel button in the payment window");
+    };
+
+    session.begin();
+  }
+</script>
 </body>
 </html>
